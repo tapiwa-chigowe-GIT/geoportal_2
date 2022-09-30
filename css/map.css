@@ -1,0 +1,10 @@
+#map {height: 95vh;}
+
+#coordinate {
+    position: absolute;
+    left: 40%;
+    background: #fff;
+    z-index: 99999;
+    bottom: 0;
+    padding: 4px;
+}
