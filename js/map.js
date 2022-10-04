@@ -95,8 +95,9 @@ var landuselayer = L.geoJson(landuses,{
     onEachFeature:function (feature, layer) {
         
         area = (turf.area(feature)/1000000).toFixed(3)
-        center_lat= turf.center(feature).latlng[lat]
-        center_lng= turf.center(feature).latlng[lng]
+        center_lat = turf.center(feature).geometry.coordinates[1].toFixed(3)
+        center_lng = turf.center(feature).geometry.coordinates[0].toFixed(3)
+        
 
         label = `Name :${feature.properties.LANDTYPE}<br>`
         label += `Area :${area}<br>`
